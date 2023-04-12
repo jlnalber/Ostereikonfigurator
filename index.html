@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Erstes Projekt</title>
+    </head>
+    <body>
+        <h1>OSTEREIKONFIGURATOR</h1>
+        <p>Der Ostereikonfigurator für ein fröhliches Osterfest.</p>
+        <h2>Farbe</h2>
+        <button onclick="faerbung('yellow')" style="background-color: yellow;">gelb</button>
+        <button onclick="faerbung('red')" style="background-color: red;">rot</button>
+        <button onclick="faerbung('blue')" style="background-color: blue; color: white;">blau</button>
+        <button onclick="faerbung('green')" style="background-color: green;">grün</button>
+        <h2>Musterung</h2>
+        <button>gewellt</button>
+        <button>zickzack</button>
+        <button>gestreift</button>
+
+        <div>
+            <svg>
+                <ellipse id="ellipse1" cx="100" cy="100" rx="50" ry="75"></ellipse>
+                <rect x="0" y="100" height="75" width="200" fill="white"></rect>
+                <ellipse id="ellipse2" cx="100" cy="100" rx="50" ry="50"></ellipse>
+            </svg>
+        </div>
+
+        <script>
+            const ellipse1 = document.getElementById('ellipse1');
+            const ellipse2 = document.getElementById('ellipse2');
+
+            function faerbung(farbe) {
+                ellipse1.setAttributeNS(null, 'fill', farbe)
+                ellipse2.setAttributeNS(null, 'fill', farbe)    
+            }
+        </script>
+    </body>
+</html>
